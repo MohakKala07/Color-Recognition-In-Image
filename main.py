@@ -29,9 +29,9 @@ while True:
     val_value = pixel_center[2]
 
     color = "Undefined"       # Default Value
-    if 0 <= val_value <= 50:
+    if (val_value == 0) and (sat_value <= 255) and (hue_value <= 255):
         color = "BLACK"
-        s = gTTS(text="Black", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Black", lang='en')  # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -40,9 +40,9 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif sat_value < 30 and val_value > 180:
+    elif (hue_value <= 255) and (sat_value <= 50) and (210 <= val_value <= 255):
         color = "WHITE"
-        s = gTTS(text="White", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="White", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -51,9 +51,9 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 5 > hue_value > 0:
+    elif (hue_value <= 5) and (sat_value <= 100) and (180 <= val_value <= 255):
         color = "RED"
-        s = gTTS(text="Red", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Red", lang='en')  # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -62,9 +62,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 5 < hue_value <= 17:
+    elif (5 < hue_value <= 17) and (150 <= sat_value <= 255) and (
+            200 <= val_value <= 255):
         color = "ORANGE"
-        s = gTTS(text="Orange", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Orange", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -73,9 +74,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 17 < hue_value <= 30:
+    elif (17 < hue_value <= 37) and (110 <= sat_value <= 180) and (
+            220 <= val_value <= 255):
         color = "YELLOW"
-        s = gTTS(text="Yellow", lang='en')        # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Yellow", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -84,9 +86,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 30 < hue_value <= 45:
+    elif (38 < hue_value <= 48) and (140 <= sat_value <= 190) and (
+            230 <= val_value <= 255):
         color = "LIME GREEN"
-        s = gTTS(text="Lime Green", lang='en')      # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Lime Green", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -95,9 +98,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 45 < hue_value < 77:
+    elif (48 < hue_value < 70) and (225 <= sat_value <= 255) and (
+            220 <= val_value <= 255):
         color = "GREEN"
-        s = gTTS(text="Green", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Green", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -108,7 +112,7 @@ while True:
         os.remove(tsname)
     elif 77 < hue_value < 98:
         color = "SKY BLUE"
-        s = gTTS(text="Sky Blue", lang='en')      # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Sky Blue", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -117,9 +121,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 98 < hue_value < 102:
+    elif (80 < hue_value < 100) and (70 <= sat_value <= 200) and (
+            245 <= val_value <= 255):
         color = "LIGHT BLUE"
-        s = gTTS(text="Light Blue", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Light Blue", lang='en')  # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -128,9 +133,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 102 < hue_value < 126:
+    elif (102 < hue_value < 126) and (225 <= sat_value <= 255) and (
+            35 <= val_value <= 255):
         color = "DARK BLUE"
-        s = gTTS(text="Dark Blue", lang='en')     # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Dark Blue", lang='en')    # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
@@ -139,7 +145,8 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 126 < hue_value < 138:
+    elif (140 < hue_value < 150) and (80 <= sat_value <= 255) and (
+            150 <= val_value <= 210):
         color = "VIOLET"
         s = gTTS(text="Violet", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
@@ -150,9 +157,10 @@ while True:
 
         time.sleep(music.duration)
         os.remove(tsname)
-    elif 138 < hue_value < 170:
+    elif (155 < hue_value < 172) and (100 <= sat_value <= 255) and (
+            220 <= val_value <= 255):
         color = "PINK"
-        s = gTTS(text="Pink", lang='en')    # Text to Speech Conversion to Speak out the Color
+        s = gTTS(text="Pink", lang='en')   # Text to Speech Conversion to Speak out the Color
         tsname = "name.mp3"
         s.save(tsname)
 
