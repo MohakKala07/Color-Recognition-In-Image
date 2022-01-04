@@ -8,7 +8,7 @@ def nothing(x):
 
 
 cv2.namedWindow("Hue Picker")
-cv2.createTrackbar("H", "Hue Picker", 0, 255, nothing)
+cv2.createTrackbar("H", "Hue Picker", 0, 360, nothing)
 cv2.createTrackbar("S", "Hue Picker", 255, 255, nothing)
 cv2.createTrackbar("V", "Hue Picker", 255, 255, nothing)
 
